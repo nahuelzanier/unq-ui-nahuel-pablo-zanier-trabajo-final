@@ -11,6 +11,16 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 10%;
+}
+
+.gameTitle {
+  text-align: center;
+  font-size: 5.2em;
+  line-height: 1.1;
 }
 
 h1 {
@@ -25,7 +35,7 @@ span {
 }
 
 .selectorButton {
-    width: 10px;
+    width: 10%;
 }
 
 button {
@@ -38,7 +48,7 @@ button {
     background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.25s;
-    width: 800px;
+    width: 100%;
   }
   button:hover {
     border-color: #646cff;

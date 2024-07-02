@@ -2,13 +2,14 @@ import { useEffect, useState } from "react"
 import { Api } from "../api/PreguntadosApi"
 import Question from "../components/Question"
 import SelectorButton from "../components/SelectorButton"
+import Win from "./Win"
+import '../styles.css'
 
-const Questions = ({ difficulty }) => {
+const Questions = ({ difficulty, setPage }) => {
 
     const [questions, setQuestions] = useState([])
     const [currentQuestion, setCurrentQuestion] = useState(null)
     const [currentNumber, setCurrentNumber] = useState(0)
-
     const [answers, setAnswers] = useState([])
 
     useEffect(() => {
@@ -20,6 +21,12 @@ const Questions = ({ difficulty }) => {
         let ans = questions.map(() => "not answered")
         setAnswers(ans)
     }, [questions])
+
+    useEffect(() => {
+        if (questions && answers.length==10 && !answers.includes("not answered")) {
+            setPage(<Win difficulty={difficulty} answers={answers} setPage={setPage}/>)
+        }
+    }, [answers])
 
     return (
         <>

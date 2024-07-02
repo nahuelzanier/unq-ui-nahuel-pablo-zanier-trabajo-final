@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import OptionButton from './OptionButton'
 import '../styles.css'
 

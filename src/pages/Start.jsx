@@ -14,10 +14,11 @@ const Start = ({ setPage }) => {
 
     return (
         <>
+            <h1 className='gameTitle'>TRIVIA GAME</h1>
             {
                 difficulties.map( diff => 
                     <div key={diff}>
-                        <button onClick={() => setPage(<Questions difficulty={diff}/>)}>
+                        <button onClick={() => setPage(<Questions difficulty={diff} setPage={setPage}/>)}>
                             {diff}
                         </button>
                     </div> )
