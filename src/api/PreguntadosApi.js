@@ -1,9 +1,9 @@
 const url = "https://preguntados-api.vercel.app"
 
-const getDifficulty = async (setDifficulty) => {
+const getDifficulty = async (setDifficulties) => {
     let response = await fetch(url + `/api/difficulty`)
     let data = await response.json()
-    setDifficulty(data)
+    setDifficulties(data)
 }
 
 const getQuestions = async (difficulty, setQuestions) => {
